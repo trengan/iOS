@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BGTransferService" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Lo-1Qa">
+                                <rect key="frame" x="28" y="167" width="359" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-G6-uvN">
+                                <rect key="frame" x="147" y="231" width="126" height="30"/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="onDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ho-pK-I11"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if2-vq-PTh">
+                                <rect key="frame" x="28" y="402" width="359" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="269" id="RmR-j0-D0S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PrL-Lo-1Qa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="CmY-zw-PKJ"/>
+                            <constraint firstItem="PrL-Lo-1Qa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Du4-Ga-h03"/>
+                            <constraint firstItem="PrL-Lo-1Qa" firstAttribute="trailing" secondItem="if2-vq-PTh" secondAttribute="trailing" id="G6M-af-ajk"/>
+                            <constraint firstItem="PIt-G6-uvN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="MRn-AO-9RP"/>
+                            <constraint firstItem="PIt-G6-uvN" firstAttribute="centerX" secondItem="PrL-Lo-1Qa" secondAttribute="centerX" constant="2.5" id="c2A-p4-zyV"/>
+                            <constraint firstItem="PrL-Lo-1Qa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="cI4-Fz-AJ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="if2-vq-PTh" secondAttribute="bottom" constant="191" id="dc8-gE-ISh"/>
+                            <constraint firstItem="PrL-Lo-1Qa" firstAttribute="leading" secondItem="if2-vq-PTh" secondAttribute="leading" id="l4A-Ks-JzJ"/>
+                            <constraint firstItem="PIt-G6-uvN" firstAttribute="top" secondItem="PrL-Lo-1Qa" secondAttribute="bottom" constant="62" id="q9w-xD-HNc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="PIt-G6-uvN" id="wUC-RL-foG"/>
+                        <outlet property="lblFileLocation" destination="if2-vq-PTh" id="tGA-Nh-XoF"/>
+                        <outlet property="progressView" destination="PrL-Lo-1Qa" id="dLY-bU-Y7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

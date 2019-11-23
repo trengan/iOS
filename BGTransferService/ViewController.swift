@@ -10,15 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var downloadButton: UIButton!
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var lblFileLocation: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        
     }
 
 
+    @IBAction func onDownload(_ sender: UIButton) {
+        
+    }
+    
 }
 
