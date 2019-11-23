@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D07DF9B2389B294004E3CD8 /* BGTransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07DF9A2389B294004E3CD8 /* BGTransferController.swift */; };
 		8DD2209C238993E200A7E872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2209B238993E200A7E872 /* AppDelegate.swift */; };
 		8DD2209E238993E200A7E872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2209D238993E200A7E872 /* SceneDelegate.swift */; };
 		8DD220A0238993E200A7E872 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2209F238993E200A7E872 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D07DF9A2389B294004E3CD8 /* BGTransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGTransferController.swift; sourceTree = "<group>"; };
 		8DD22098238993E200A7E872 /* BGTransferService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGTransferService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD2209B238993E200A7E872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DD2209D238993E200A7E872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8DD220A4238993E300A7E872 /* Assets.xcassets */,
 				8DD220A6238993E300A7E872 /* LaunchScreen.storyboard */,
 				8DD220A9238993E300A7E872 /* Info.plist */,
+				8D07DF9A2389B294004E3CD8 /* BGTransferController.swift */,
 			);
 			path = BGTransferService;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				8DD220A0238993E200A7E872 /* ViewController.swift in Sources */,
 				8DD2209C238993E200A7E872 /* AppDelegate.swift in Sources */,
 				8DD2209E238993E200A7E872 /* SceneDelegate.swift in Sources */,
+				8D07DF9B2389B294004E3CD8 /* BGTransferController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
