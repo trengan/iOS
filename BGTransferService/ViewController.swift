@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    private let bgTransferController = BGTransferController()
     
     @IBOutlet weak var downloadButton: UIButton!
     
@@ -21,16 +21,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bgTransferController.completed = { (location) in
+            print("Download finished: \(location.absoluteString)")
+            self.lblFileLocation.text = location.absoluteString
+        }
+        
+        bgTransferController.onProgress = { (progressValue) in
+             self.progressView.progress = Float(progressValue)
+        }
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
     }
 
-
     @IBAction func onDownload(_ sender: UIButton) {
-        
+        bgTransferController.startDownload()
     }
-    
 }
 
